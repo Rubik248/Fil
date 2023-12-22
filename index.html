@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Локальное файловое хранилище</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="drop-area" onclick="document.getElementById('file-input').click()">
+    <input type="file" id="file-input" multiple onchange="handleFiles(this.files)">
+    <label for="file-input">Перетащите файлы сюда или кликните для выбора</label>
+  </div>
+  <select id="filter-type" onchange="filterFiles()">
+    <option value="all">Все</option>
+    <option value="images">Изображения</option>
+    <option value="size">Меньше заданного размера</option>
+  </select>
+  <input type="number" id="size-limit" placeholder="Введите размер в байтах" oninput="filterFiles()">
+  <table id="file-list">
+    <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Тип</th>
+        <th>Размер (байт)</th>
+        <th>Действие</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+</html>

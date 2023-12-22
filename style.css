@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0; /* Светло-серый фон */
+    color: #333;
+    margin: 0;
+    height: 100vh; /* Занимает всю высоту экрана */
+  }
+
+  #drop-area {
+    border: 2px dashed #757575; /* Тёмно-серая граница */
+    padding: 20px;
+    margin: 20px;
+    width: 100%; /* Зона для сброса на всю ширину */
+    text-align: center;
+    background-color: rgba(117, 117, 117, 0.2); /* Прозрачный тёмно-серый фон */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer;
+  }
+
+  #file-input {
+    display: none;
+  }
+
+  #filter-type,
+  #size-limit {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #757575; /* Тёмно-серая граница */
+    border-radius: 4px;
+    background-color: rgba(117, 117, 117, 0.2); /* Прозрачный тёмно-серый фон */
+  }
+
+  #filter-type {
+    color: white;
+  }
+
+  #size-limit {
+    width: 200px;
+  }
+
+  #file-list {
+    border-collapse: collapse;
+    width: 100%; /* Занимает всю ширину экрана */
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный белый фон таблицы */
+    border: 1px solid #ccc; /* Светло-серая граница */
+    border-radius: 4px;
+  }
+
+  #file-list th,
+  #file-list td {
+    padding: 10px;
+    border: 1px solid #757575; /* Тёмно-серая граница */
+  }
+
+  #file-list th {
+    background-color: #757575; /* Тёмно-серый фон */
+    color: white;
+  }
+
+  #file-list tbody tr:nth-child(even) {
+    background-color: #f0f0f0; /* Светло-серый фон */
+  }
